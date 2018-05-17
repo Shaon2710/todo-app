@@ -1,0 +1,16 @@
+body {
+    background-color: green;
+}
+
+#hadding h2 {
+    padding-top: 30px;
+    color: red;
+}
+
+.btn-group {
+    padding: 30px;
+}
+
+.btn-group span {
+    color: red;
+}
