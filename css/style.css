@@ -1,16 +1,20 @@
 body {
-    background-color: green;
+    background-color: rgb(238, 245, 238);
 }
 
 #hadding h2 {
     padding-top: 30px;
-    color: red;
+    color: black;
 }
 
-.btn-group {
-    padding: 30px;
+#buttons {
+    padding: 10px;
 }
 
-.btn-group span {
-    color: red;
+#buttons span {
+    color: black;
+}
+
+h3 {
+    padding: 10px;
 }

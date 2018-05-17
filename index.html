@@ -14,20 +14,133 @@
     <div class="container my-2 text-center">
 
         <div id="hadding">
-            <h2>Chouse Your Button</h2>
+            <h2>Add Your Task </h2>
         </div>
 
-
-        <div class="btn-group btn-group-lg" role="group" aria-label="Basic">
-            <button type="button" class="btn btn-secondary"><span>Add</span></button>
-            <button type="button" class="btn btn-secondary"><span>See</span></button>
-            <button type="button" class="btn btn-secondary"><span>Edit</span></button>
+        <div id="buttons">
+            <button id="addButton" type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#AddModal">Add</button>
+            <!-- <button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#Modal-See-Serch">See</button>
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#Edit-Modal">Edit</button> -->
         </div>
+
+        <input type="text" name="s" class="form-control form-control-lg " id="serch-input" placeholder="Search here...">
+
+
+        <h3>Your Remain Task</h3>
+
+
+        <table class="table table-striped table-dark">
+
+            <tbody>
+                <tr>
+
+                    <td>Sliping</td>
+                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
+                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
+                </tr>
+                <tr>
+                    <td>Eting</td>
+                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
+                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
+                </tr>
+                <tr>
+                    <td>Coding</td>
+                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
+                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Your Complite Task</h3>
+
+        <table class="table table-striped table-dark">
+            <tbody>
+                <tr>
+                    <td>Mark</td>
+                </tr>
+            </tbody>
+        </table>
+
 
 
     </div>
 
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Modal ADD-->
+    <div class="modal fade" id="AddModal" tabindex="-1" role="dialog" aria-labelledby="AddTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="AddTitle">Add Your today work</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal See
+    <div class="modal fade" id="Modal-See-Serch" tabindex="-1" role="dialog" aria-labelledby="See-Search-Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="See-Search-Title">Your Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   Modal Edit
+    <div class="modal fade" id="Edit-Modal" tabindex="-1" role="dialog" aria-labelledby="Edit-Modal-Title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Edit-Modal-Title">Edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <script src="jQuery/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.js"></script>
     <script src="js/main.js"></script>
 </body>
 
