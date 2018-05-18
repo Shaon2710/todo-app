@@ -19,48 +19,40 @@
 
         <div id="buttons">
             <button id="addButton" type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#AddModal">Add</button>
-            <!-- <button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#Modal-See-Serch">See</button>
-            <button type="button" class="btn btn-outline-success btn-lg btn-block" data-toggle="modal" data-target="#Edit-Modal">Edit</button> -->
         </div>
 
         <input type="text" name="s" class="form-control form-control-lg " id="serch-input" placeholder="Search here...">
 
-
         <h3>Your Remain Task</h3>
 
-
-        <table class="table table-striped table-dark">
-
-            <tbody>
-                <tr>
-
-                    <td>Sliping</td>
-                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
-                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
-                </tr>
-                <tr>
-                    <td>Eting</td>
-                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
-                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
-                </tr>
-                <tr>
-                    <td>Coding</td>
-                    <td><button type="button" class="btn btn-outline-success">Success</button></td>
-                    <td><button type="button" class="btn btn-outline-danger">Danger</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <ul class="list-group" id="task-list">
+            <li class="list-group-item">
+                <span class="task-name">Check emails</span>
+                <span class="done btn btn-outline-success float-right">Done</span>
+            </li>
+            <li class="list-group-item">
+                <span class="task-name">Check Trello board</span>
+                <span class="done btn btn-outline-success float-right">Done</span>
+            </li>
+            <li class="list-group-item">
+                <span class="task-name">Browsing</span>
+                <span class="done btn btn-outline-success float-right">Done</span>
+            </li>
+            </li>
+            <li class="list-group-item">
+                <span class="task-name">Make Move list</span>
+                <span class="done btn btn-outline-success float-right">Done</span>
+            </li>
+        </ul>
 
         <h3>Your Complite Task</h3>
 
-        <table class="table table-striped table-dark">
-            <tbody>
-                <tr>
-                    <td>Mark</td>
-                </tr>
-            </tbody>
-        </table>
-
+        <ul class="list-group" id="task-list1">
+            <li class="list-group-item">
+                <span class="task-name">Check emails</span>
+                <span class="done btn btn-outline-success float-right">Undo</span>
+            </li>
+        </ul>
 
 
     </div>
@@ -77,67 +69,18 @@
               </button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-3">
-
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <!-- Modal See
-    <div class="modal fade" id="Modal-See-Serch" tabindex="-1" role="dialog" aria-labelledby="See-Search-Title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="See-Search-Title">Your Task</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-                </div>
-                <div class="modal-body">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <form class="form-inline mt-4" id="add-task-form">
+                        <div class="col-md-6">
+                            <input type="text" name="task" class="form-control" id="task-name" placeholder="Add your task...">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-outline-success pl-2">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-
-   Modal Edit
-    <div class="modal fade" id="Edit-Modal" tabindex="-1" role="dialog" aria-labelledby="Edit-Modal-Title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Edit-Modal-Title">Edit</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
 
     <script src="jQuery/jquery.min.js"></script>
     <script src="bootstrap/bootstrap.bundle.js"></script>
