@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Todo App</title>
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
@@ -27,19 +28,24 @@
 
         <ul class="list-group" id="task-list">
             <li class="list-group-item">
+
+                <span class="task-date float-left">05/02/2018</span>
                 <span class="task-name">Check emails</span>
                 <span class="done btn btn-outline-success float-right">Done</span>
             </li>
             <li class="list-group-item">
+                <span class="task-date float-left">05/02/2018</span>
                 <span class="task-name">Check Trello board</span>
                 <span class="done btn btn-outline-success float-right">Done</span>
             </li>
             <li class="list-group-item">
+                <span class="task-date float-left">05/02/2018</span>
                 <span class="task-name">Browsing</span>
                 <span class="done btn btn-outline-success float-right">Done</span>
             </li>
             </li>
             <li class="list-group-item">
+                <span class="task-date float-left">05/02/2018</span>
                 <span class="task-name">Make Move list</span>
                 <span class="done btn btn-outline-success float-right">Done</span>
             </li>
@@ -49,6 +55,7 @@
 
         <ul class="list-group" id="task-list1">
             <li class="list-group-item">
+                <span class="task-date float-left">05/02/2018</span>
                 <span class="task-name">Check emails</span>
                 <span class="done btn btn-outline-success float-right">Undo</span>
             </li>
@@ -71,10 +78,13 @@
                 <div class="modal-body">
                     <form class="form-inline mt-4" id="add-task-form">
                         <div class="col-md-6">
+                            <label for="date-felde">Date</label>
+                            <input type="text" id="date-felde" name="date" placeholder="Chose your Date" class="datepicker form-control">
+                            <label for="task-name">Task</label>
                             <input type="text" name="task" class="form-control" id="task-name" placeholder="Add your task...">
                         </div>
                         <div class="col-md-3">
-                            <button type="submit" class="btn btn-outline-success">Submit</button>
+                            <button type="submit" class="btn btn-outline-success float-right">Submit</button>
                         </div>
                     </form>
                     <div class="modal-footer">
@@ -87,6 +97,7 @@
 
     <script src="jQuery/jquery.min.js"></script>
     <script src="bootstrap/bootstrap.bundle.js"></script>
+    <script src="bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -7,20 +7,27 @@ taskList.addEventListener('click', (e) => {
         let li = e.target.parentElement;
         li.parentElement.removeChild(li);
 
-        let x = li.querySelector("span");
-        let task = x.textContent;
+        let getTask = li.querySelector(".task-name");
+        let task = getTask.textContent;
+
+        let getDate = li.querySelector(".task-date");
+        let date = getDate.textContent;
 
         let liOne = document.createElement('li');
+        let taskDate = document.createElement('span');
         let taskName = document.createElement('span');
         let doneBtn = document.createElement('span');
 
+        taskDate.textContent = date;
         taskName.textContent = task;
         doneBtn.textContent = "Undo";
 
         liOne.classList.add("list-group-item");
+        taskDate.classList.add("task-date", "float-left");
         taskName.classList.add("task-name");
         doneBtn.classList.add("done", "btn", "btn-outline-success", "float-right");
 
+        liOne.appendChild(taskDate);
         liOne.appendChild(taskName);
         liOne.appendChild(doneBtn);
         taskList1.appendChild(liOne);
@@ -32,20 +39,27 @@ taskList1.addEventListener('click', (e) => {
         let li = e.target.parentElement;
         li.parentElement.removeChild(li);
 
-        let x = li.querySelector("span");
-        let task = x.textContent;
+        let getTask = li.querySelector(".task-name");
+        let task = getTask.textContent;
+
+        let getDate = li.querySelector(".task-date");
+        let date = getDate.textContent;
 
         let liOne = document.createElement('li');
+        let taskDate = document.createElement('span');
         let taskName = document.createElement('span');
         let doneBtn = document.createElement('span');
 
+        taskDate.textContent = date;
         taskName.textContent = task;
         doneBtn.textContent = "Done";
 
         liOne.classList.add("list-group-item");
+        taskDate.classList.add("task-date", "float-left");
         taskName.classList.add("task-name");
         doneBtn.classList.add("done", "btn", "btn-outline-success", "float-right");
 
+        liOne.appendChild(taskDate);
         liOne.appendChild(taskName);
         liOne.appendChild(doneBtn);
         taskList.appendChild(liOne);
@@ -58,19 +72,28 @@ const addForm = document.forms['add-task-form'];
 addForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let task = addForm.querySelector('input[name="task"]').value;
+    let date = addForm.querySelector('input[name="date"]').value;
+
+    console.log(task);
+    console.log(date);
+
     if (task) {
 
         let li = document.createElement('li');
+        let taskDate = document.createElement('span');
         let taskName = document.createElement('span');
         let doneBtn = document.createElement('span');
 
+        taskDate.textContent = date;
         taskName.textContent = task;
         doneBtn.textContent = "done";
 
         li.classList.add("list-group-item");
+        taskDate.classList.add("task-date", "float-left");
         taskName.classList.add("task-name");
         doneBtn.classList.add("done", "btn", "btn-outline-success", "float-right");
 
+        li.appendChild(taskDate);
         li.appendChild(taskName);
         li.appendChild(doneBtn);
         taskList.appendChild(li);
@@ -107,3 +130,10 @@ searchInput.addEventListener('keyup', (e) => {
         }
     });
 });
+
+
+(function($) {
+    $(function() {
+        $('.datepicker').datepicker();
+    });
+})(jQuery)
